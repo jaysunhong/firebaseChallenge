@@ -6,4 +6,12 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "/public/index.html"));
   });
 
+  app.get("/player1", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/player1.html"));
+  });
+
+  app.get("/player2", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/player2.html"));
+  });
+
 };

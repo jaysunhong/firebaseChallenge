@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/player2.css">
+    <title>Pokémon RPS Battle!</title>
+</head>
+
+<body>
+    <div class="container cursor">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="/images/pokemon.png" id="logo">
+            </div>
+        </div>
+
+        <div class="container mainbox">
+            <div class="row">
+                <div class="col-sm-12 starterDoc">
+                    <a>Choose your battle Pokemon!</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <button id="pikachu" value="Pikachu" class="starter"><img src="/images/pikachu.gif">Pikachu</button></div>
+                <div class="col-3">
+                    <button id="bulbasaur" value="Bulbasaur" class="starter"><img src="/images/bulbasaur.gif">Bulbasaur</button></div>
+                <div class="col-3">
+                    <button id="charmander" value="Charmander" class="starter"><img src="/images/charmander.gif">Charmander</button></div>
+                <div class="col-3">
+                    <button id="squirtle" value="Squirtle" class="starter"><img src="/images/squirtle.gif">Squirtle</button></div>       
+            </div> 
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<script src="/javascript/player2.js"></script>
+</body>
+</html>

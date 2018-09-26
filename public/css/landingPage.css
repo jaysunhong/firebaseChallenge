@@ -1,0 +1,51 @@
+h1 {
+    text-align: center;
+}
+.starterDoc {
+    text-align: center;
+    font-size: 45px;
+    text-shadow: 4px 4px 4px gold;
+    color: darkslateblue;
+    position: relative;
+    top: 60px;
+    font-family: "Avengeance Heroic Avenger";
+}
+body {
+    background-image: url("../images/pokeballLayout.jpg");
+    font-family: "Bebas Neue";
+    font-size: 20px;
+}
+.mainbox {
+    height: 400px;
+    background: white;
+    position: relative;
+    top: 40px;
+    background-image: url("../images/starterLayout.png");
+    background-repeat: no-repeat;
+    background-size: 1110px 750px;
+    background-position: 50% 100%;
+}
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 100px;
+}
+img {
+    width: 150px;
+    height: 200px;
+}
+.characterSelection {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+.characterSelection a {
+    text-decoration: none;
+    color:darkslateblue;
+}
+.characterSelection a:hover {
+    color: gold;
+}

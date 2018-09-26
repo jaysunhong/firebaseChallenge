@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <title>Firebase Pokémon Battle!</title>
+    <link rel="stylesheet" type="text/css" href="/css/landingPage.css">
+    <title>Pokémon RPS Battle!</title>
 </head>
 
 <body>
@@ -20,33 +20,26 @@
         <div class="container mainbox">
             <div class="row">
                 <div class="col-sm-12 starterDoc">
-                    <a>Choose your battle Pokemon!</a>
+                    <a>Choose a Player:</a>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-3">
-                    <button id="pikachu" value="Pikachu" class="starter"><img src="/images/pikachu.gif">Pikachu</button></div>
-                <div class="col-3">
-                    <button id="bulbasaur" value="Bulbasaur" class="starter"><img src="/images/bulbasaur.gif">Bulbasaur</button></div>
-                <div class="col-3">
-                    <button id="charmander" value="Charmander" class="starter"><img src="/images/charmander.gif">Charmander</button></div>
-                <div class="col-3">
-                    <button id="squirtle" value="Squirtle" class="starter"><img src="/images/squirtle.gif">Squirtle</button></div>       
-            </div> 
-
-            <div class="row scorebox">
-                <div id="wins">Wins: 0</div>  
-                <div id="losses">Losses: 0</div> 
+                <div class="col-lg-6 characterSelection">
+                    <a id="player1" href="/player1">
+                        <img src="/images/ash.png">
+                        <div>Ash Ketchum</div>
+                    </a>
+                </div>
+                <div class="col-lg-6 characterSelection">
+                    <a id="player2" href="/player2">
+                        <img src="/images/dawn.png">
+                        <div>Dawn Berlitz</div>
+                    </a>
+                </div>
             </div>
 
-            <div class="row">
-                <button id="reset">Battle Again?</button>
-            </div>
         </div>
     </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-<script src="/javascript/game.js"></script>
 </body>
 </html>
