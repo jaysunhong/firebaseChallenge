@@ -1,6 +1,6 @@
 ## Pokemon Rock-Paper-Scissors Battle
 
-### Technology Used:
+### Technologies Used:
 * Node.js
 * Express.js
 * Google Firebase
