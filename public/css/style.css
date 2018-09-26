@@ -22,6 +22,30 @@ h1 {
     height: 206px;
     width: 231.65px;
 }
+.scorebox {
+    position: relative;
+    top: 100px;
+    left: 14px;
+    font-size: 16px;
+    color: white;
+}
+#wins {
+    margin-right: 4px;
+}
+#losses {
+    color: white;
+}
+#reset {
+    position: fixed;
+    bottom: 225px;
+    left: 1170px;
+    font-size: 16px;
+    display: none;
+}
+#reset:active {
+    background: black;
+    color: red;
+}
 body {
     background-image: url("../images/pokeballLayout.jpg");
     font-family: "Bebas Neue";

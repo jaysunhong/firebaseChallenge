@@ -17,17 +17,28 @@ var squirtle = $("#squirtle");
 var charmander = $("#charmander");
 var pOneStarter;
 var pTwoStarter;
+var p1wins = 0;
+var p1loss = 0;
 
 database.ref().set({
     pOneStarter: 'null',
-    pTwoStarter: 'null'
+    pTwoStarter: 'null',
+    p1wins: p1wins,
+    p1loss: p1loss
 });
 
 function reset() {
-    database.ref().set({
-        pOneStarter: 'null',
-        pTwoStarter: 'null'
+    confirmStarter;
+    pikachu = $("#pikachu");
+    bulbasaur = $("#bulbasaur");
+    squirtle = $("#squirtle");
+    charmander = $("#charmander");
+
+    database.ref().update({
+        pOneStarter: 'null'
     });
+
+    $('.mainbox').show();
 
     chooseStarter(charmander);
     chooseStarter(bulbasaur);
@@ -36,13 +47,13 @@ function reset() {
 }
 
 function transitionOne() {
-    $(".mainbox").css("background-image", 'url("./assets/images/transition1.gif")')
+    $(".mainbox").css("background-image", 'url("/images/transition1.gif")')
     $(".starter").hide();
     $(".starterDoc").hide();
 }
 
 function checkVSsquirtle(starter) {
-    $(".mainbox").css("background-image", 'url("./assets/images/battleLayout.png")')
+    $(".mainbox").css("background-image", 'url("/images/battleLayout.png")')
         .css("background-color", 'black')
         .css('background-position', 'bottom')
         .css('background-size', '720px 480px');
@@ -59,7 +70,7 @@ function checkVSsquirtle(starter) {
 }
 
 function checkVSbulbasaur(starter) {
-    $(".mainbox").css("background-image", 'url("./assets/images/battleLayout.png")')
+    $(".mainbox").css("background-image", 'url("/images/battleLayout.png")')
         .css("background-color", 'black')
         .css('background-position', 'bottom')
         .css('background-size', '720px 480px');
@@ -76,7 +87,7 @@ function checkVSbulbasaur(starter) {
 }
 
 function checkVSpikachu(starter) {
-    $(".mainbox").css("background-image", 'url("./assets/images/battleLayout.png")')
+    $(".mainbox").css("background-image", 'url("/images/battleLayout.png")')
         .css("background-color", 'black')
         .css('background-position', 'bottom')
         .css('background-size', '720px 480px');
@@ -93,7 +104,7 @@ function checkVSpikachu(starter) {
 }
 
 function checkVScharmander(starter) {
-    $(".mainbox").css("background-image", 'url("./assets/images/battleLayout.png")')
+    $(".mainbox").css("background-image", 'url("/images/battleLayout.png")')
         .css("background-color", 'black')
         .css('background-position', 'bottom')
         .css('background-size', '720px 480px');
@@ -139,8 +150,8 @@ $(document).ready(function () {
                 charmander.animate({right: '145px'});
                 squirtle.animate({right: '415px'});
 
-                $("*").css("cursor", 'url(./assets/images/' + starter.val() + 'cursor.gif), auto');
-                $(".mainbox").css("background-image", 'url("./assets/images/transition.gif")')
+                $("*").css("cursor", 'url(/images/' + starter.val() + 'cursor.gif), auto');
+                $(".mainbox").css("background-image", 'url("/images/transition.gif")')
                     .css("background-position", 'center')
                     .css("background-size", '1110px 750px');
                         
@@ -165,7 +176,13 @@ $(document).ready(function () {
                                 .css('text-shadow', '4px 4px 4px darkslateblue')
                                 .css('color', 'gold')
                                 .css('margin-top', '-30px');
+                            $('#reset').css('display', 'block')
+                                .on('click', function () {
+                                    reset();
+                                });
                         }, 4 * 1000);   
+                        
+                        
                     // if user picks charmander and opponent picks bulbasaur  
                     } else if (starter.val() === "Charmander" && snapshot.val().pTwoStarter === "Bulbasaur") {
                         $(".starterDoc").text("Ready for battle!");
@@ -411,7 +428,7 @@ $(document).ready(function () {
                 });               
             }
         }); 
-    }
+    }   
     chooseStarter(charmander);
     chooseStarter(bulbasaur);
     chooseStarter(squirtle);
