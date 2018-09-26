@@ -33,14 +33,28 @@ body {
     height: 100px;
 }
 img {
-    width: 150px;
-    height: 200px;
+    width: 200px;
+    height: 250px;
+}
+#player2 img {
+    height: 260px;
+    width: 190px;
+}
+#player2 {
+    position: relative;
+    top: 20px;
+    left: 400px;
+    display: none;
+}
+#player1 {
+    position: relative;
+    top: 30px;
+    right: 400px;
+    display: none;
 }
 .characterSelection {
     display: inline-block;
     text-align: center;
-    position: relative;
-    top: 50px;
 }
 .characterSelection a {
     text-decoration: none;
